@@ -30,4 +30,23 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
+    @Override
+    public String toString() {
+        return "Book name is: "+this.bookName+" . Author name is "+this.authorName+" . Publishing year is "+this.publishingYear;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()){
+            return false;
+        }
+        Book b2 = (Book) other;
+        return bookName.equals(b2.bookName);
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(bookName);
+    }
+
 }

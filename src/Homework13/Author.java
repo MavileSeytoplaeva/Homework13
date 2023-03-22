@@ -18,6 +18,10 @@ public class Author {
     public String getLastName(){
         return this.lastName;
     }
+    @Override
+    public String toString() {
+        return "Name is: "+this.name+" . Author lastname is "+this.lastName;
+    }
 }
 
 

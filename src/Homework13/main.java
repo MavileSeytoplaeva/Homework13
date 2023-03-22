@@ -3,6 +3,7 @@ public class main {
     public static void main(String[] args){
         Author timeRidersAuthor = new Author("Jack", "Scarrow");
         Book timeRiders = new Book("TimeRiders", timeRidersAuthor, 2010);
+        Book timeRiders1 = new Book("TimeRiders", timeRidersAuthor, 2010);
         System.out.println(timeRiders.getBookName()+" "+timeRidersAuthor.getName()+" "+timeRidersAuthor.getLastName()+" "+timeRiders.getPublishingYear());
         Author consueloAuthor = new Author("George", "Sand");
         Book consuelo = new Book("Consuelo", consueloAuthor, 1843);
