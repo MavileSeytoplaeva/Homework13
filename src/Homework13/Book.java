@@ -41,12 +41,15 @@ public class Book {
             return false;
         }
         Book b2 = (Book) other;
-        return bookName.equals(b2.bookName);
+        if(this.getPublishingYear() != ((Book) other).getPublishingYear()){
+            return false;
+        }
+        return bookName.equals(b2.bookName) && authorName.equals(b2.authorName);
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(bookName);
+        return java.util.Objects.hash(bookName,authorName,publishingYear);
     }
 
 }

@@ -22,6 +22,19 @@ public class Author {
     public String toString() {
         return "Name is: "+this.name+" . Author lastname is "+this.lastName;
     }
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()){
+            return false;
+        }
+        Author a2 = (Author) other;
+        return name.equals(a2.name)&&lastName.equals(a2.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(name+lastName);
+    }
 }
 
 
